@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    CONCEPT: XML-Based Bean Configuration with Constructor Injection
+    This file defines:
+      - Two beans: `carSpecification` and `car`
+      - The Car bean depends on Specification bean
+      - The dependency is injected using <constructor-arg>
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="carSpecification" class="in.rishabh_gupta.Specification">
+        <property name="make" value="Kia"/>
+        <property name="model" value="Seltos"/>
+    </bean>
+    <bean id="car" class="in.rishabh_gupta.Car">
+        <constructor-arg ref="carSpecification"/>
+    </bean>
+</beans>

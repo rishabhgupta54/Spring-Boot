@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    CONCEPT: Bean Configuration in XML
+    This file tells Spring which beans to create and how to configure them.
+
+    Structure:
+      <beans>             Root element for Spring configuration
+        <bean>            Defines one managed object
+          id      = Unique bean name
+          class   = Fully-qualified class name
+          <property> = Injects a value into a setter property
+        </bean>
+      </beans>
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+        Bean Definition
+        id     : "bean1" (used to retrieve it from the context)
+        class  : Full class path (in.rishabh_gupta.Bean)
+        property:
+          - name  : Java property name ("message")
+          - value : Value to inject into that property
+    -->
+    <bean id="bean1" class="in.rishabh_gupta.Bean">
+        <property name="message" value="I am a first bean"/>
+    </bean>
+</beans>

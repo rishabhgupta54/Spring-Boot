@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    The <property> tag sets values or injects bean references
+    through setter methods after object creation.
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean representing car specifications -->
+    <bean id="carSpecification" class="in.rishabh_gupta.Specification">
+        <property name="make" value="Kia"/>
+        <property name="model" value="Seltos"/>
+    </bean>
+
+    <!-- Bean for Car, dependency injected via setter -->
+    <bean id="car" class="in.rishabh_gupta.Car">
+        <property name="specification" ref="carSpecification"/>
+    </bean>
+
+</beans>
