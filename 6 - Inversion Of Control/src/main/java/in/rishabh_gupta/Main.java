@@ -1,7 +1,7 @@
 /*
  * Inversion Of Control
  *
- * In this example, we use **Spring's IoC (Inversion of Control)** container
+ * In this example, we use Spring's IoC (Inversion of Control) container
  * to inject a dependency (Database implementation) into the User class
  * using a constructor argument.
  *

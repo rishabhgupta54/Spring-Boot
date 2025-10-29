@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Spring automatically injects a bean that matches
+    the *type* of the property (in this case, Specification).
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Independent bean -->
+    <bean id="specification" class="in.rishabh_gupta.Specification">
+        <property name="make" value="Kia"/>
+        <property name="model" value="Seltos"/>
+    </bean>
+
+    <!-- Dependent bean -->
+    <bean id="car" class="in.rishabh_gupta.Car" autowire="byType"/>
+</beans>

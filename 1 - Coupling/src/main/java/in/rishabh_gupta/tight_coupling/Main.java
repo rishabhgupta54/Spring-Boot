@@ -1,11 +1,12 @@
 /*
- * CONCEPT: Tight Coupling
- * Tight Coupling means one class is **highly dependent** on another
+ * Tight Coupling
+ *
+ * Tight Coupling means one class is highly dependent on another
  * concrete class. Changing one class will require changes in others.
  *
  * In this example:
  *   - `User` is tightly coupled with `MySQLDatabase`
- *   - There is **no flexibility** to switch databases
+ *   - There is no flexibility to switch databases
  *
  * FLOW VISUALIZATION (Tight Coupling)
  *
@@ -22,11 +23,11 @@
  *           │                  │
  *           ▼                  │
  *   ┌──────────────────┐       │
- *   │   MySQLDatabase  │◄─────┘
+ *   │   MySQLDatabase  │◄──────┘
  *   └──────────────────┘
  *
  *  To switch to PostgreSQL, we must MODIFY the User class.
- *  Violates the **Open-Closed Principle (OCP)**.
+ *  Violates the Open-Closed Principle (OCP).
  *  Difficult to test or extend.
  */
 

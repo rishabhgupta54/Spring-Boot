@@ -1,6 +1,7 @@
 /*
- * CONCEPT: Loose Coupling
- * Loose Coupling means classes depend on **abstractions**, not
+ * Loose Coupling
+ *
+ * Loose Coupling means classes depend on abstractions, not
  * on concrete implementations.
  *
  * - Achieved via interfaces, abstract classes, or dependency injection.
@@ -30,7 +31,7 @@
  *
  * Main chooses the Database implementation dynamically
  * User class stays unchanged for all database types
- * Follows **Dependency Inversion Principle (DIP)**
+ * Follows Dependency Inversion Principle (DIP)
  */
 
 package in.rishabh_gupta.loose_coupling;
